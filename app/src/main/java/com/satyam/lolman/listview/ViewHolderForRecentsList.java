@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class ViewHolderForRecentsList {
 
         ImageView profilePic;
-        TextView name,lastMessage,lastMessageTime;
+        TextView name,lastMessage,lastMessageTime,unreadCount;
         ConstraintLayout online;
 
         public ViewHolderForRecentsList(View item) {
@@ -22,5 +22,6 @@ public class ViewHolderForRecentsList {
             lastMessage = item.findViewById(R.id.lastMessage);
             lastMessageTime = item.findViewById(R.id.lastMessageTime);
             online = item.findViewById(R.id.online);
+            unreadCount = item.findViewById(R.id.unreadCount);
         }
 }

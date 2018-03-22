@@ -1,6 +1,9 @@
 package com.satyam.lolman.listview;
 
 import android.content.res.Resources;
+import android.util.Log;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by satya on 22-Mar-18.
@@ -12,16 +15,27 @@ public class DataForRecent {
     String lastMessage;
     Boolean lastMessageIsYours;
     String lastMessageTime;
-
     Boolean online;
+    Boolean unread;
+    int unreadCount;
 
-    public void setAll(int profilePic, String name, String lastMessage, Boolean lastMessageIsYours,String lastMessageTime, Boolean online) {
+    public int getUnreadCount() {
+        return unreadCount;
+    }
+
+    public void setUnreadCount(int unreadCount) {
+        this.unreadCount = unreadCount;
+    }
+
+    public void setAll(int profilePic, String name, String lastMessage, Boolean lastMessageIsYours, String lastMessageTime, Boolean online, Boolean unread, int unreadCount) {
         this.profilePic = profilePic;
         this.name = name;
         this.lastMessage = lastMessage;
         this.lastMessageIsYours = lastMessageIsYours;
         this.lastMessageTime = lastMessageTime;
         this.online = online;
+        this.unread = unread;
+        this. unreadCount = unreadCount;
     }
 
     public int getProfilePic() {
@@ -70,5 +84,13 @@ public class DataForRecent {
 
     public void setOnline(Boolean online) {
         this.online = online;
+    }
+
+    public Boolean getUnread() {
+        return unread;
+    }
+
+    public void setUnread(Boolean unread) {
+        this.unread = unread;
     }
 }

@@ -56,17 +56,24 @@ public class AdapterForRecentsList extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolderForRecentsList viewHolder;
+        DataForRecent dataforsingle = (DataForRecent) getItem(i);
         if(view == null) {
-            view = inflater.inflate(R.layout.list_row, viewGroup, false);
+            if(dataforsingle.unread){
+                view = inflater.inflate(R.layout.list_row_unread, viewGroup, false);
+            }else {
+                view = inflater.inflate(R.layout.list_row, viewGroup, false);
+            }
             viewHolder = new ViewHolderForRecentsList(view);
             view.setTag(viewHolder);
         }else{
             viewHolder = (ViewHolderForRecentsList) view.getTag();
         }
-        DataForRecent dataforsingle = (DataForRecent) getItem(i);
         viewHolder.profilePic.setImageBitmap(getCroppedBitmap(BitmapFactory.decodeResource(context.getResources(),dataforsingle.getProfilePic())));;
         viewHolder.name.setText(dataforsingle. getName());
         viewHolder.lastMessage.setText(((dataforsingle.lastMessageIsYours)?"You: ":"")+dataforsingle.getLastMessage());
+        if(dataforsingle.unread){
+            viewHolder.unreadCount.setText(Integer.toString(dataforsingle. getUnreadCount()));
+        }
         if(dataforsingle.online) {
             viewHolder.online.setBackgroundResource(R.drawable.online);
         }else{

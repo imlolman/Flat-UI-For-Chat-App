@@ -33,10 +33,26 @@ public class MainActivity extends AppCompatActivity {
 
     private void setContent() {
         int res = 0;
-        for (String recent: recents) {
+
+        for (int i = 1;i<=2;i++) {
             DataForRecent temp = new DataForRecent();
             Random rand = new Random();
-            temp.setAll(profilePics[res],recent,msgs[res], rand.nextBoolean() ,rand.nextInt(12)+":"+rand.nextInt(50)+" "+((rand.nextBoolean())?"AM":"PM")  ,rand.nextBoolean());
+            temp.setAll(profilePics[res],recents[res],msgs[res], rand.nextBoolean() ,rand.nextInt(12)+":"+rand.nextInt(50)+" "+((rand.nextBoolean())?"AM":"PM")  ,rand.nextBoolean(), true, rand.nextInt(100));
+            res++;
+            myList.add(temp);
+        }
+
+        for (int i = 4;i<=8;i++) {
+            DataForRecent temp = new DataForRecent();
+            Random rand = new Random();
+            temp.setAll(profilePics[res],recents[res],msgs[res], rand.nextBoolean() ,rand.nextInt(12)+":"+rand.nextInt(50)+" "+((rand.nextBoolean())?"AM":"PM")  ,rand.nextBoolean(),false,rand.nextInt(100));
+            res++;
+            myList.add(temp);
+        }
+        for (int i = 9;i<=9;i++) {
+            DataForRecent temp = new DataForRecent();
+            Random rand = new Random();
+            temp.setAll(profilePics[res],recents[res],msgs[res], rand.nextBoolean() ,rand.nextInt(12)+":"+rand.nextInt(50)+" "+((rand.nextBoolean())?"AM":"PM")  ,rand.nextBoolean(),rand.nextBoolean(),rand.nextInt(100));
             res++;
             myList.add(temp);
         }

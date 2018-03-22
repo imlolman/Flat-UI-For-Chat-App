@@ -33,11 +33,12 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
                     android:text="Satyam Gupta"
-                    android:id="@+id/name"
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="19sp" />
 
 
@@ -58,7 +59,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="You: Mandir Wahi Banega"
-                    android:textColor="@color/one"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:textSize="14sp" />
 
                 <TextView
@@ -67,8 +69,9 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="5sp"
                     android:text="5:30 AM"
+                    android:textStyle="bold"
                     android:textAlignment="textEnd"
-                    android:textColor="@color/two"
+                    android:textColor="@color/white"
                     android:textSize="10sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -97,21 +100,21 @@
         </android.support.constraint.ConstraintLayout>
     </android.support.constraint.ConstraintLayout>
     <android.support.constraint.ConstraintLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <EditText
-            android:id="@+id/unreadCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:background="@drawable/unread_badge"
-            android:textColor="@color/colorAccent"/>
+       <EditText
+           android:id="@+id/unreadCount"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="4"
+           android:textSize="15dp"
+           android:textStyle="bold"
+           android:background="@drawable/unread_badge"
+           android:textColor="@color/four"/>
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

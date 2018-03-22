@@ -1,5 +1,6 @@
 package com.satyam.lolman.listview;
 
+import android.support.constraint.ConstraintLayout;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -13,7 +14,7 @@ public class ViewHolderForRecentsList {
 
         ImageView profilePic;
         TextView name,lastMessage,lastMessageTime;
-        LinearLayout online;
+        ConstraintLayout online;
 
         public ViewHolderForRecentsList(View item) {
             profilePic = item.findViewById(R.id.profilePic);

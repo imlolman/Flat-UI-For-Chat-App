@@ -63,7 +63,7 @@ public class AdapterForRecentsList extends BaseAdapter {
         }else{
             viewHolder = (ViewHolderForRecentsList) view.getTag();
         }
-        viewHolder.profilePic.setImageBitmap(getCroppedBitmap(BitmapFactory.decodeResource(context.getResources(),dataforsingle.getProfilePic())));;
+        viewHolder.profilePic.setImageBitmap(getCroppedBitmap(BitmapFactory.decodeResource(context.getResources(),dataforsingle.getProfilePic())));
         viewHolder.name.setText(dataforsingle. getName());
         viewHolder.lastMessage.setText(((dataforsingle.lastMessageIsYours)?"You: ":"")+dataforsingle.getLastMessage());
         if(dataforsingle.unread){

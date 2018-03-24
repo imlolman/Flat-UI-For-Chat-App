@@ -45,7 +45,7 @@
             <FrameLayout
                 android:id="@+id/frameLayout"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
+                android:layout_height="230dp"
                 android:layout_marginTop="80dp"
                 tools:layout="@layout/fragment_enter_number" />
         </LinearLayout>
@@ -53,6 +53,7 @@
     </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
+        android:orientation="vertical"
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="5dp"

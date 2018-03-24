@@ -14,18 +14,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter Mobile Number"
+            android:text="Enter Name"
             android:textColor="@color/four"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:textSize="20dp"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginEnd="20dp"
             android:layout_marginStart="20dp"
             android:backgroundTint="@color/four"
-            android:inputType="phone"
+            android:inputType="textPersonName"
             android:paddingBottom="10dp"
             android:textColorHint="@color/colorRealPrimaryDark"
             android:textColor="@color/white" />
@@ -35,12 +36,10 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
             android:background="@drawable/button_enter_number"
-            android:text="Send OTP"
+            android:text="Set Name"
             android:textStyle="bold"
-            android:onClick="sendotp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="setname"
             android:textColor="@color/colorPrimaryDark"
             tools:ignore="OnClick" />
     </LinearLayout>

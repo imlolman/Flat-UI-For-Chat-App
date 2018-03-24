@@ -1,15 +1,23 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="230dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="20dp"
     tools:context="com.satyam.lolman.listview.Login.EnterNumber">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter OTP"
+            android:textColor="@color/four"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:textSize="20dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="45dp"
@@ -18,7 +26,6 @@
             android:backgroundTint="@color/four"
             android:inputType="phone"
             android:paddingBottom="10dp"
-            android:hint="Enter OTP"
             android:textColorHint="@color/colorRealPrimaryDark"
             android:textColor="@color/white" />
 
@@ -28,7 +35,6 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
             android:gravity="right"
             app:layout_constraintTop_toTopOf="parent">
             <Button
@@ -37,9 +43,12 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_enter_number"
                 android:text="Verify"
+                android:onClick="validateotp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="OnClick" />
+
             <Button
                 android:layout_width="0px"
                 android:layout_weight="1"
@@ -48,10 +57,26 @@
                 android:text="Resend"
                 android:layout_marginLeft="30dp"
                 android:textStyle="bold"
+                android:onClick="resendotp"
                 app:layout_constraintTop_toTopOf="parent"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/colorPrimaryDark"
+                tools:ignore="OnClick" />
+
         </LinearLayout>
-    </android.support.constraint.ConstraintLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_enter_number"
+            android:text="Edit Number"
+            android:drawableStart="@drawable/edit_primary"
+            android:onClick="editnumber"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            tools:ignore="OnClick" />
+    </LinearLayout>
     <!-- TODO: Update blank fragment layout -->
 
 </FrameLayout>

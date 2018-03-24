@@ -1,9 +1,18 @@
 package com.satyam.lolman.listview.Recents;
 
+import android.content.Intent;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.satyam.lolman.listview.Chats.Chat;
 import com.satyam.lolman.listview.R;
 import java.util.ArrayList;
 import java.util.Random;
@@ -16,6 +25,7 @@ public class Recent_Chats extends AppCompatActivity {
     String[] recents = {"Chitransh  Rathore", "Samantha	Oliver", "Lisa	Pullman", "Christopher	Mackay", "Bernadette	Simpson", "Blake	Randall", "Jane	Robertson", "William	Blake", "Dominic	Marshall"};
     String[] msgs = {"Mandir Wahi Banega", "Lorem ipsum dolor sit amet", "In tempor malesuada nibh","at dignissim orci ultricies vestibulum","Nunc sit amet congue justo","vel lobortis metus"," Nulla posuere eget nibh"," Duis accumsan magna erat","Curabitur id mauris vel nisl venenatis"};
     ArrayList<DataForRecent> myList = new ArrayList<DataForRecent>();
+    boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +38,32 @@ public class Recent_Chats extends AppCompatActivity {
         setContent();
         listView = findViewById(R.id.listview);
         listView.setAdapter(new AdapterForRecentsList(getBaseContext(), myList));
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                // selected item
+                // DataForRecent dataForRecent = myList.get(position);
+                Intent i2 = new Intent(getBaseContext(),Chat.class);
+                i2.putExtra("name",myList.get(position).getName());
+                i2.putExtra("profilepic",myList.get(position).getProfilePic());
+                startActivity(i2);
+                overridePendingTransition( R.anim.enter_from_right, R.anim.exit_to_left );
+
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(getApplicationContext(), "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
     }
 
     private void setContent() {

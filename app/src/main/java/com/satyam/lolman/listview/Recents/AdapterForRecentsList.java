@@ -1,4 +1,4 @@
-package com.satyam.lolman.listview;
+package com.satyam.lolman.listview.Recents;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -8,19 +8,14 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import com.satyam.lolman.listview.R;
+
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by satya on 22-Mar-18.

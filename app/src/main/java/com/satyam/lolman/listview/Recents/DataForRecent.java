@@ -1,4 +1,4 @@
-package com.satyam.lolman.listview;
+package com.satyam.lolman.listview.Recents;
 
 import android.content.res.Resources;
 import android.util.Log;

@@ -1,10 +1,10 @@
-package com.satyam.lolman.listview;
+package com.satyam.lolman.listview.Recents;
 
 import android.support.constraint.ConstraintLayout;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.satyam.lolman.listview.R;
 
 /**
  * Created by satya on 22-Mar-18.

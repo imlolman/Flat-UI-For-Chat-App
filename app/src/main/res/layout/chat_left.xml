@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/left_chat_back"
+            android:maxWidth="230dp"
+            android:id="@+id/msgText"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec turpis at purus porttitor condimentum vitae vel urna. Aliquam blandit, ante vitae viverra dignissim, metus felis semper metus, in euismod mi ipsum at leo. Cras egestas ornare nunc, vel tempor sapien. Proin ac sodales tellus. Morbi et nibh non felis suscipit scelerisque."
+            android:textColor="@color/white" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
